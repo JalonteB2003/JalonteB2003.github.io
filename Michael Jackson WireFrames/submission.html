@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Thank You</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="MJ.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1><a href="home.html">The Life of Michael Jackson</a></h1>
+        </header>
+                <h2>Received Data:</h2>
+                <p>
+                    Name: <strong id="receivedName"></strong><br>
+                    E-mail: <strong id="receivedEmail"></strong><br>
+                    Country: <strong id="receivedCountry"></strong><br>
+                    Date: <strong id="receivedDate"></strong><br>
+                    Favorite Song: <strong id="receivedFavSong"></strong><br>
+                    Impact: <strong id="receivedImpact"></strong><br>
+                </p>
+            
+                <script>
+                    // Accessing the URL parameters to retrieve form data
+                    const urlParams = new URLSearchParams(macOS.location.search);
+                    const name = urlParams.get('myName');
+                    const email = urlParams.get('myEmail');
+                    const country = urlParams.get('myCountry');
+                    const date = urlParams.get('myDate');
+                    const favsong = urlParams.get('myFavsong');
+                    const impact = urlParams.get('myImpact');
+            
+                    // Displaying the received data in the receiver.html page
+                    document.getElementById('receivedName').innerText = name;
+                    document.getElementById('receivedEmail').innerText = email;
+                    document.getElementById('receivedCountry').innerText = country;
+                    document.getElementById('receivedDate').innerText = date;
+                    document.getElementById('receivedFavSong').innerText = favsong;
+                    document.getElementById('receivedImpact').innerText = impact;
+                </script>
+
+    </div>
+</body>
+<footer>
+    Copyright &copy; 2023 Micheal Jackson Honor<br>
+    <a href="mailto:MichealJacksonWeb@honory.com">MichealJacksonWeb@honory.com</a>
+</footer>
+</html>

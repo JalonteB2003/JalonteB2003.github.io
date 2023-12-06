@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<php></php>
+<head>
+    <title> The Life of Micheal Jackson </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="mj.css" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("fanForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevents the form from submitting in the default way
+
+                // Collect form data
+                const formData = new FormData(this);
+                const formObject = {};
+                formData.forEach(function (value, key) {
+                    formObject[key] = value;
+                });
+
+                // Display form data on the page
+                const displayData = document.getElementById("displayData");
+                displayData.innerHTML = `
+                    <h3>Submitted Information:</h3>
+                    <p>Name: ${formObject.myName}</p>
+                    <p>Email: ${formObject.myEmail}</p>
+                    <p>Country: ${formObject.myCountry}</p>
+                    <p>Date: ${formObject.myDate}</p>
+                    <p>Favorite Song: ${formObject.myFavsong}</p>
+                    <p>Impact: ${formObject.myImpact}</p>
+                `;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1><a href="home.html">The Life of Michael Jackson</a></h1>
+        </header>
+        <nav>
+            <ul>
+                <b>
+                    <li><a href="home.html"> Home </li>
+                </b>
+                <b>
+                    <li><a href="biography.html"> Biography</a></li>
+                </b>
+                <b>
+                    <li><a href="media.html"> Media Gallery</a></li>
+                </b>
+                <b>
+                    <li class="dropdown">
+                        <a href="discography.html" class="dropbtn">Discography</a>
+                        <div class="dropdown-content">
+                            <a href="video.html">Video</a>
+                        </div>
+                    </li>
+                </b>
+                <b>
+                    <li><a href="fan.html">Fan Voice</a></li>
+                </b>
+            </ul>
+        </nav>
+        <main>
+            <h2>Fan Voice</h2>
+            <p>
+                We invite you to share your cherished Michael Jackson
+                memories with us. Whether it's your all-time favorite song,
+                a memorable concert moment, or a personal experience that showcases how
+                Michael Jackson's artistry and influence have touched your life, we'd love to
+                hear your stories. Join us in celebrating the King of Pop's enduring legacy and the profound
+                impact he's had on fans all around the world. Share your favorite Michael Jackson song or moment,
+                and let's keep his spirit and music alive through the memories we hold dear.
+            </p>
+
+            <form method="post" action="https://webdevbasics.net/scripts/javajam8.php">
+
+                <label for="myName">Name:</label>
+                <input type="text" name="myName" id="myName" required placeholder="First and Last Name">
+                <label for="myEmail">E-mail:</label>
+                <input type="text" name="myEmail" id="myEmail" required placeholder="you@domain.com">
+                <label for="myCountry">Country:</label>
+                <input type="text" name="myCountry" id="myCountry" required>
+                <label for="myDate">Date:</label>
+                <input type="date" name="myDate" id="myDate" max="2023-11-05">
+                <label for="myFavsong">Favorite Song:</label>
+                <input type="text" name="myFavsong" id="myFavsong" required
+                    placeholder="Your Favorite Michael Jackson Song">
+                <label for="myImpact">How did Michael Jackson music impact your life:</label>
+                <textarea name="myImpact" id="myImpact" row="2" cols="40" required>
+                    </textarea>
+                <input type="submit" value="Submit">
+            </form>
+            <div id="displayData"></div>
+        </main>
+        <footer>
+            Copyright &copy; 2023 Micheal Jackson Honor<br>
+            <a href="mailto:MichealJacksonWeb@honory.com"> MichealJacksonWeb@honory.com</a>
+        </footer>
+    </div>
+    
+</body>
+
+</html>

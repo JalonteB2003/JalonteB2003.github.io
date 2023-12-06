@@ -1,0 +1,390 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color: #221811;
+    font-family: Tahoma, Arial, sans-serif;
+    margin: 0;
+}
+
+#wrapper {
+    padding: 0;
+}
+
+h1 {
+    color: red;
+    font-size: 2em;
+    text-align: center;
+}
+
+h2 {
+    color: red;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+header {
+    background-color: black;
+    color: red;
+    height: 150px;
+    padding-left: 5px;
+    padding-top: 20px;
+    padding-bottom: none;
+}
+
+.box-shadow {
+    box-shadow: 10px, 5px, 5px;
+}
+
+header h2 {
+    box-shadow: 0 20px 10px 5px black;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:link {
+    color: red;
+}
+
+header a:visited {
+    color: red;
+}
+
+header a:hover {
+    color: lightcoral;
+}
+
+nav {
+    text-align: center;
+    font-size: 1.5em;
+    background-color: burlywood;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:link {
+    color: red;
+}
+
+nav a:visited {
+    color: red;
+}
+
+nav a:hover {
+    color: lightcoral;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25em;
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+}
+
+nav li {
+    border-bottom: 1px solid #FEF6C2;
+    padding: .5em 1em;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: red;
+
+}
+
+main {
+    display: block;
+    padding: 0 0 2em 0;
+}
+
+h2,
+h3,
+h4,
+p,
+div,
+ul,
+dl {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+main ul {
+    padding-left: 2em;
+}
+
+img {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#mobile {
+    display: inline;
+}
+
+#desktop {
+    display: none;
+}
+
+footer {
+    background-color: black;
+    font-size: .60em;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 1em;
+    border-top: 2px solid burlywood;
+    color: red;
+}
+
+table {
+    margin: auto;
+    width: 60%;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 10px;
+    font-size: 15px;
+}
+
+tr:nth-of-type(odd) {
+    background-color: #D2B48E;
+}
+
+
+@supports(display: grid) {
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: burlywood;
+        width: 100%;
+    }
+
+    label {
+        margin-bottom: 5px;
+    }
+
+
+
+    input,
+    textarea {
+        margin-bottom: .5em;
+    }
+
+    input[type="submit"] {
+        width: 150px;
+        margin-top: 10px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.column {
+    width: 50%;
+    /* Two columns */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column img {
+    padding-top: 40px;
+    max-width: 100%;
+    /* Make images responsive within the column */
+    height: auto;
+    margin: 5px;
+    /* Add some spacing between images */
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    font-weight: bold;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Show the dropdown content when hovering or focusing on the dropdown button */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style the dropdown links */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: burlywood;
+}
+
+#displayData {
+    padding: 20px;
+    margin-top: none;
+    /* Add space from the top */
+}
+
+.wrapleft,
+.wrapright {
+    text-align: center;
+    /* Centers the images */
+    margin-bottom: 15px;
+    /* Adds some space between the image and the paragraph */
+}
+
+@media (min-width: 600px) {
+    header {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    nav {
+        font-size: 1em;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    nav ul {
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+
+    nav li {
+        border-bottom: none;
+    }
+
+    #mobile {
+        display: none;
+    }
+
+    #desktop {
+        display: inline;
+    }
+
+
+    h4 {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    form {
+        margin: 0 auto;
+        width: 60%;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .wrapleft {
+        float: left;
+        margin-right: 20px;
+        margin-left: 0px;
+    }
+
+    .wrapright {
+        float: right;
+        margin-right: 0px;
+        margin-left: 20px;
+    }
+
+    #flow {
+        display: flex;
+        flex-direction: row;
+    }
+
+    input[type="submit"] {
+        grid-column: 2/3;
+        width: 9em;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    @supports (display: grid) {
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: nav;
+            font-size: 1.3em;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        #wrapper {
+            display: grid;
+            grid-template:
+                "header header"
+                "nav    main"
+                "footer footer"
+                / 200px;
+        }
+
+        nav ul {
+            flex-direction: column;
+        }
+    }
+
+}
